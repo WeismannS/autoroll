@@ -1,4 +1,4 @@
-  function use(chosen)
+function Roll(chosen)
      while wait() do
     pcall(function() 
     repeat wait() until game:IsLoaded()
@@ -12,7 +12,9 @@ local ohString1 = "RRLastName"
 game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.RRLastName.LocalScript.RR:InvokeServer(ohString1)
  wait(1)
  print(game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.LName.Text)
- if game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.LName == chosen then return end
+ if game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.LName.Text == chosen then
+     print("yep")
+     return end
        end
                        local args = {
     [1] = 1,
@@ -20,10 +22,9 @@ game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.Re
 }
 game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("Gui"):WaitForChild("Ui"):WaitForChild("UiModule"):WaitForChild("Modules"):WaitForChild("Settings"):WaitForChild("Set"):InvokeServer(unpack(args))
  game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId)   
-       syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/WeismannS/autoroll/main/roll.lua'))('Ishida')")
+       syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/WeismannS/autoroll/main/roll.lua'))('"..Ishida.."')")
  
 end)
  
     end
   end
-use("Ishida")
