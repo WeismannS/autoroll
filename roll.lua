@@ -1,6 +1,6 @@
-while wait() do
+  function use(chosen)
+     while wait() do
     pcall(function() 
-        function use(chosen)
     repeat wait() until game:IsLoaded()
         repeat 
 wait()   
@@ -20,9 +20,10 @@ game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.Re
 }
 game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("Gui"):WaitForChild("Ui"):WaitForChild("UiModule"):WaitForChild("Modules"):WaitForChild("Settings"):WaitForChild("Set"):InvokeServer(unpack(args))
  game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId)   
-       syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/WeismannS/autoroll/main/roll.lua'))()")
-
-end
+       syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/WeismannS/autoroll/main/roll.lua'))('Ishida')")
  
-    use("Kamado")
- end)  end
+end)
+ 
+    end
+  end
+use("Ishida")
