@@ -1,5 +1,7 @@
 function Roll(chosen)
-      print("pepe")
+   while wait() do
+            pcall(function() 
+         print("pepe")
       repeat wait() until game:IsLoaded() and game.Players.LocalPlayer ~= nil
       print("waiting")
    repeat wait() until game:GetService("Players").LocalPlayer:FindFirstChild("Spins",true)
@@ -19,5 +21,6 @@ game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.Re
 game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("Gui"):WaitForChild("Ui"):WaitForChild("UiModule"):WaitForChild("Modules"):WaitForChild("Settings"):WaitForChild("Set"):InvokeServer(unpack(args))
  game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId)   
        syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/WeismannS/autoroll/main/roll.lua'))();Roll('"..chosen.."')")
-
+ end)
+            end 
   end
