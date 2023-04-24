@@ -1,5 +1,5 @@
 function Roll(chosen)
-      repeat wait() until game:IsLoaded() and game:GetService("Players"):FindFirstChild("LocalPlayer")
+      repeat wait() until game:IsLoaded() and game.Players.LocalPlayer ~= nil
    repeat wait() until game:GetService("Players").LocalPlayer:FindFirstChild("Spins",true)
 spins = tonumber(game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.Spins.Text:match("%d+%.?%d*"))
        for i=0,10 do
