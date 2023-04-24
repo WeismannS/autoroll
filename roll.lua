@@ -7,7 +7,9 @@ function Roll(chosen)
    repeat wait() until game:GetService("Players").LocalPlayer:FindFirstChild("Spins",true)
 spins = tonumber(game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.Spins.Text:match("%d+%.?%d*"))
        for i=0,spins do
-           if game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.LName.Text == chosen then return end
+           if game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.LName.Text == chosen then return
+                   game.Players.LocalPlayer:Kick("Congrats you got your"..chosen)
+               end
 local ohString1 = "RRLastName"
 
 game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.RRLastName.LocalScript.RR:InvokeServer(ohString1)
