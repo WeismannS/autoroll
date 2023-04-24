@@ -1,10 +1,5 @@
 function Roll(chosen)
-     while wait() do
-    pcall(function() 
-    repeat wait() until game:IsLoaded()
-        repeat 
-wait()   
-until game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan:WaitForChild("Spins")
+   repeat wait() until game:GetService("Players").LocalPlayer:FindFirstChild("Spins",true)
 spins = tonumber(game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.Spins.Text:match("%d+%.?%d*"))
        for i=0,10 do
            if game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.LName.Text == chosen then return end
@@ -21,8 +16,5 @@ game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.Re
 game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("Gui"):WaitForChild("Ui"):WaitForChild("UiModule"):WaitForChild("Modules"):WaitForChild("Settings"):WaitForChild("Set"):InvokeServer(unpack(args))
  game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, game.JobId)   
        syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/WeismannS/autoroll/main/roll.lua'))('"..chosen"')")
- 
-end)
- 
-    end
+
   end
