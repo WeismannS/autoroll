@@ -1,4 +1,6 @@
-function use(chosen)
+while wait() do
+    pcall(function() 
+        function use(chosen)
     repeat wait() until game:IsLoaded()
         repeat 
 wait()   
@@ -23,4 +25,4 @@ game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"):WaitForChild("G
 end
  
     use("Kamado")
-   
+ end)  end
