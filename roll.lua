@@ -5,6 +5,9 @@ function Roll(chosen)
       repeat wait() until game:IsLoaded() and game.Players.LocalPlayer ~= nil
       print("waiting")
    repeat wait() until game:GetService("Players").LocalPlayer:FindFirstChild("Spins",true)
+            for i, v in next, getconnections(game.Players.LocalPlayer.Idled) do
+                    v:Disable()
+                end
 spins = tonumber(game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.Spins.Text:match("%d+%.?%d*"))
        for i=0,spins do
            if game:GetService("Players").LocalPlayer.PlayerGui.Gui.Ui.UiModule.Modules.Shop.RerollClan.RollClanFrame.Clan.LName.Text == chosen then return
